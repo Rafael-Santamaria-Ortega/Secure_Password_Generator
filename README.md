@@ -7,9 +7,15 @@ Features:
 * Shuffles the characters for enhanced randomness.
 * Allows the user to generate multiple passwords or exit the program.
 
-## Usage:
+## CLI or CMD usage: 
 
 * Run the script to generate a password.
+* Choose whether to create another password or exit after each generation.
+
+## Optional usage for Windows users:
+
+* Download the directory password_generator
+* Run the .exe file
 * Choose whether to create another password or exit after each generation.
 
 ## Example:
