@@ -9,23 +9,14 @@ Features:
 
 ## CLI or CMD usage: 
 
-* Run the script to generate a password.
-* Choose whether to create another password or exit after each generation.
+* Run the python script 
 
-## Optional usage for Windows users:
+## Optional usage for Windows users, which would be most of the non IT people of an organization:
 
-* Download the directory password_generator
+* Download the directory password_generatorV2
+* Open folder
 * Run the .exe file
-* Choose whether to create another password or exit after each generation.
+* Click 'Generate Password' to create a random secure password!
 
-## Example:
-
-```bash
-This is a Python-based secure password generator tool made by Rafael Santamaria
--------------------------------------------------------------------------------
-Here is your strong password: Z5q@HgB1
---------------------------------------------------------------------------------
-Do you want to create another password (y/n)?: y
-```
 
 ### Licensensed under MIT License
