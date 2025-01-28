@@ -5,8 +5,9 @@
 # Import relevant modules
 import string
 import random
-import sys
 import time
+import tkinter as tk
+from tkinter import messagebox
 
 # Define a function to create passwords for repeatability
 def create_password():
@@ -40,38 +41,28 @@ def create_password():
     password=''.join(result)
 
     # Return password on screen
-    return print(f'Here is your strong password: {password}')
-
-# define function to ask if user wants to create another password
-def ask():
-    q=input('Do you want to create another password (y/n)?: ')
-    
-    # If so, call function again. If not, terminate the program
-    if q=='y':
-        run=True
-    elif q=='n':
-        run=False
-        sys.exit('Closing program.')
-    else:
-        print('Please answer "y" or "n"')
-        q=input('Do you want to create another password (y/n)?: ')
-        if q=='y':
-            run=True
-        else:
-            run=False
+    #return password in the tkinter GUI
+    #password_entry.config(text=f'{password}')
+    password_entry.config(state='normal')
+    password_entry.delete(0,'end')
+    password_entry.insert(0,password)
+    password_entry.config(state='readonly')
 
 if __name__=='__main__':
-    time.sleep(1)
-    print('This is a Python-based secure password generator tool made by Rafael Santamaria')
-    print('-------------------------------------------------------------------------------')
-    time.sleep(1)
+    # Create a tkinter window
+    root=tk.Tk()
+    root.title('Secure Password Generator Tool')
+    root.geometry('400x200')
+    root.config(bg='navyblue')
 
-    # Create a while loop to keep the app going until user decides to close it
-    run=True
+    # Output field using Entry
+    password_entry=tk.Entry(root,font=('consolas',12),justify='center')
+    password_entry.config(bg='white',fg='black',state='readonly')
+    password_entry.pack(pady=(50,10),padx=30,fill='x')
 
-    while run==True:
-        # Call the function to create strong password
-        create_password()
-        # Call the function to ask if more passwords are desired
-        print('--------------------------------------------------------------------------------')
-        ask()
+    # Create a button to generate password
+    button=tk.Button(root,text='Generate Password',padx=5,pady=5,font=('consolas',12),command=create_password)
+    button.pack(pady=(20,10))
+
+    # Loop the tkinter window
+    root.mainloop()
