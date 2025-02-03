@@ -13,7 +13,7 @@ Features:
 
 ## Optional usage for Windows users, which would be most of the non IT people of an organization:
 
-* Download passpy.exe (source code in this repository as password_generator.py) 
+* Download passwordpy.exe (source code in this repository as password_generator.py) 
 * Run the file
 * Click 'Generate Password' to create a random secure password!
 
